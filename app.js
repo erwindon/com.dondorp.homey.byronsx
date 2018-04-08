@@ -244,6 +244,9 @@ ringBellActionNrD.register();
 let ringBellActionNrE = new Homey.FlowCardAction('send_ring_signal_nrE');
 ringBellActionNrE.register();
 
+let ringBellActionNrF = new Homey.FlowCardAction('send_ring_signal_nrF');
+ringBellActionNrF.register();
+
 let ringBellActionId = new Homey.FlowCardAction('send_ring_signal_id');
 ringBellActionId.register();
 
@@ -315,6 +318,16 @@ class ByronSxDoorbell extends Homey.App {
 			var ringerId = args['ringerId']
 			this.log('RING-E: ringerId:' + ringerId);
 			var bits = getBits(ringerId, 0);
+			mySignal.tx(bits, console.log);
+			return true;
+		});
+
+		ringBellActionNrF.registerRunListener((args, state) => {
+			var ringerId = args['ringerId']
+			var melodyNr = args['melodyNr']
+			this.log('RING-F: ringerId:' + ringerId + ', melodyNr:' + melodyNr);
+			var melodyId = melodyIds[melodyNr];
+			var bits = getBits(ringerId, melodyId);
 			mySignal.tx(bits, console.log);
 			return true;
 		});
