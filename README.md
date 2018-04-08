@@ -32,7 +32,7 @@ Doorbell chimes:
 * SX56
 * SX60i
 * SX72
-* SX80
+* SX80 tested
 * SX81
 * SX83
 * SX86
@@ -53,6 +53,7 @@ Doorbell chimes:
 * SX245
 * SX252
 * SX823
+
 Depending on the model, the list of possible sounds is adjusted.
 
 ### Installation
