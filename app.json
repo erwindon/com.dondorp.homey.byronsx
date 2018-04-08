@@ -1,0 +1,485 @@
+{
+	"id": "com.dondorp.homey.byronsx",
+	"version": "1.0.0",
+	"compatibility": ">=1.5.0",
+	"sdk": 2,
+	"name": {
+		"nl": "Byron SX Deurbel",
+		"en": "Byron SX Doorbell"
+	},
+	"description": {
+		"nl": "Geeft ondersteuning voor Byron SX deurbellen.",
+		"en": "Adds support for Byron SX Doorbells."
+	},
+	"category": [
+		"appliances"
+	],
+	"permissions": [
+		"homey:wireless:433"
+		],
+	"images": {
+		"large": "/assets/images/large.png",
+		"small": "/assets/images/small.png"
+	},
+	"author": {
+		"name": "Erwin Dondorp",
+		"email": "byronsx@dondorp.com"
+	},
+	"signals": {
+		"433": {
+			"ByronSxDoorbellSignal": {
+				"sof": [ 314 ],
+				"eof": [],
+				"words": [
+					[ 364, 641 ],
+					[ 706, 305 ]
+				],
+				"interval": 2728,
+				"xsensitivity": 0.7,
+				"repetitions": 42,
+				"minimalLength": 12,
+				"maximalLength": 12
+			}
+		}
+	},
+	"flow": {
+		"triggers": [ {
+			"id": "receive_ring_signal",
+			"title": {
+				"en": "The doorbell is pressed",
+				"nl": "De deurbel is ingedrukt"
+			},
+			"tokens": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"title": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"example": 121
+				},
+				{
+					"name": "melodyId",
+					"type": "number",
+					"title": {
+						"en": "melodyId",
+						"nl": "melodieId"
+					},
+					"example": 3
+				},
+				{
+					"name": "melodyNr",
+					"type": "number",
+					"title": {
+						"en": "melodyNr",
+						"nl": "melodieNr"
+					},
+					"example": 2
+				}
+			]
+		}
+		],
+		"actions": [
+		{
+			"id": "send_ring_signal_nrA",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 and SX245 (8 sounds)",
+				"nl":"Ondersteunt SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 en SX245 (8 geluiden)"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+							{ "id": "1",
+								"label":{
+									"en": "Tubular 3-notes",
+									"nl": "Buizen 3 noten"
+								}
+							},
+							{ "id": "2",
+								"label":{
+									"en": "Big Ben",
+									"nl": "Big Ben"
+								}
+							},
+							{ "id": "3",
+								"label":{
+									"en": "Tubular 2-notes",
+									"nl": "Buizen 2 noten"
+								}
+							},
+							{ "id": "4",
+								"label":{
+									"en": "Solo",
+									"nl": "Solo"
+								}
+							},
+							{ "id": "5",
+								"label":{
+									"en": "Tubular Scare",
+									"nl": "Buizendans"
+								}
+							},
+							{ "id": "6",
+								"label":{
+									"en": "Clarinet",
+									"nl": "Klarinet"
+								}
+							},
+							{ "id": "7",
+								"label":{
+									"en": "Saxophone",
+									"nl": "Saxofoon"
+								}
+							},
+							{ "id": "8",
+								"label":{
+									"en": "Morning Dew",
+									"nl": "Ochtendgloren"
+								}
+							}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_signal_nrB",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX6, SX7, SX21, SX80 and SX120 (4 sounds)",
+				"nl":"Ondersteunt SX6, SX7, SX21, SX80 en SX120 (4 geluiden)"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+							{ "id": "1",
+								"label":{
+									"en": "Tubular 3-notes",
+									"nl": "Buizen 3 noten"
+								}
+							},
+							{ "id": "2",
+								"label":{
+									"en": "Big Ben",
+									"nl": "Big Ben"
+								}
+							},
+							{ "id": "3",
+								"label":{
+									"en": "Tubular 2-notes",
+									"nl": "Buizen 2 noten"
+								}
+							},
+							{ "id": "4",
+								"label":{
+									"en": "Solo",
+									"nl": "Solo"
+								}
+							}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_signal_nrC",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX72, SX201, SX202 and SX209 (8 alternative sounds)",
+				"nl":"Ondersteunt SX72, SX201, SX202 en SX209 (8 alternatieve geluiden)"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+							{ "id": "1",
+								"label":{
+									"en": "Electro Mechanical - Ding Dong",
+									"nl": "Electro-mechanisch - Ding Dong"
+								}
+							},
+							{ "id": "2",
+								"label":{
+									"en": "Westminster - 8 notes",
+									"nl": "Westminster - 8 noten"
+								}
+							},
+							{ "id": "3",
+								"label":{
+									"en": "Jive",
+									"nl": "Jive"
+								}
+							},
+							{ "id": "4",
+								"label":{
+									"en": "Wedding March",
+									"nl": "Huwelijksmars"
+								}
+							},
+							{ "id": "5",
+								"label":{
+									"en": "Piano",
+									"nl": "Piano"
+								}
+							},
+							{ "id": "6",
+								"label":{
+									"en": "Harmony",
+									"nl": "Harmonie"
+								}
+							},
+							{ "id": "7",
+								"label":{
+									"en": "Dog Barking",
+									"nl": "Blaffende Hond"
+								}
+							},
+							{ "id": "8",
+								"label":{
+									"en": "Ringer",
+									"nl": "Ringer"
+								}
+							}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_signal_nrD",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX81, SX86 and SX204 (8 alternative sounds)",
+				"nl":"Ondersteunt SX81, SX86 en SX204 (8 alternatieve geluiden)"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+							{ "id": "1",
+								"label":{
+									"en": "Westminster",
+									"nl": "Westminster"
+								}
+							},
+							{ "id": "2",
+								"label":{
+									"en": "Ding Dong Repeat",
+									"nl": "Ding Dong Repeat"
+								}
+							},
+							{ "id": "3",
+								"label":{
+									"en": "Telephone Ring",
+									"nl": "Telefoon Rinkel"
+								}
+							},
+							{ "id": "4",
+								"label":{
+									"en": "Circus Theme",
+									"nl": "Circus Thema"
+								}
+							},
+							{ "id": "5",
+								"label":{
+									"en": "Banjo on my Knee",
+									"nl": "Banjo on my Knee"
+								}
+							},
+							{ "id": "6",
+								"label":{
+									"en": "Twinkle Twinkle",
+									"nl": "Twinkle Twinkle"
+								}
+							},
+							{ "id": "7",
+								"label":{
+									"en": "It's a Small World",
+									"nl": "It's a Small World"
+								}
+							},
+							{ "id": "8",
+								"label":{
+									"en": "Dog Barking",
+									"nl": "Blaffende Hond"
+								}
+							}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_signal_nrE",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX5i, SX15, SX15i, SX60i and SX252 (mechanical bell)",
+				"nl":"Ondersteunt SX5i, SX15, SX15i, SX60i en SX252 (mechanische bel)"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				}
+			]
+		},
+		{
+			"id": "send_ring_signal_nrF",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX83 and SX823 (4 alternative sounds)",
+				"nl":"Ondersteunt SX83 en SX823 (4 alternatieve geluiden)"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+							XXXX
+							{ "id": "1",
+								"label":{
+									"en": "Westminster Chime - 8 notes",
+									"nl": "Westminster Chime - 8 noten"
+								}
+							},
+							{ "id": "2",
+								"label":{
+									"en": "Ding-Dong - Repeat",
+									"nl": "Ding-Dong - Repeat"
+								}
+							},
+							{ "id": "3",
+								"label":{
+									"en": "Ding Dong Ding",
+									"nl": "Ding Dong Ding"
+								}
+							},
+							{ "id": "4",
+								"label":{
+									"en": "Alarm Tone",
+									"nl": "Alarm Toon"
+								}
+							}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_signal_id",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Use an internal melody-id, the protocol supports the values 0..15",
+				"nl":"Gebruik een intern melody-id, het protocol ondersteunt de waarden 0..15"
+			},
+			"args": [
+				{
+					"name": "ringerId",
+					"type": "number",
+					"placeholder": {
+						"en": "ringerId",
+						"nl": "drukkerId"
+					},
+					"min": 0,
+					"max": 255
+				},
+				{
+					"name": "melodyId",
+					"type": "number",
+					"placeholder": {
+						"en": "melodyId",
+						"nl": "melodieId"
+					},
+					"min": 0,
+					"max": 15
+				}
+			]
+		}
+		]
+	}
+}
