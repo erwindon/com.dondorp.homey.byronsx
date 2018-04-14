@@ -17,6 +17,7 @@
 	"permissions": [
 		"homey:wireless:433"
 		],
+	"keywords": ["doorbell", "deurbel", "Byron", "SX"],
 	"images": {
 		"large": "/assets/images/large.png",
 		"small": "/assets/images/small.png"
