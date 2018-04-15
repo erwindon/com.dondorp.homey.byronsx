@@ -28,7 +28,7 @@
 	},
 	"signals": {
 		"433": {
-			"ByronSxDoorbellSignal": {
+			"ByronSxSignal": {
 				"sof": [ 314 ],
 				"eof": [],
 				"words": [

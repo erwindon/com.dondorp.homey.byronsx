@@ -155,7 +155,7 @@ let bellPressedTrigger = new Homey.FlowCardTrigger('receive_ring_signal');
 bellPressedTrigger.register();
 
 // create & register a signal using the id from your app.json
-let mySignal = new Homey.Signal433('ByronSxDoorbellSignal');
+let mySignal = new Homey.Signal433('ByronSxSignal');
 mySignal.register()
 	.then(() => {
 		// Analysis for melodyBits:
