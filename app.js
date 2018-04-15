@@ -116,6 +116,9 @@
 
 const Homey = require('homey');
 
+// remember when the bell last sounded
+// so that we don't trigger too often
+// currently a global setting (not per bell)
 var lastRing = Date.now();
 
 // The internal IDs are different from the melody numbers
