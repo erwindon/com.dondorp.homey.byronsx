@@ -52,10 +52,10 @@
 			},
 			"tokens": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"title": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"example": 121
@@ -94,10 +94,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,
@@ -172,10 +172,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,
@@ -226,10 +226,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,
@@ -304,10 +304,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,
@@ -382,10 +382,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,
@@ -405,10 +405,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,
@@ -459,10 +459,10 @@
 			},
 			"args": [
 				{
-					"name": "ringerId",
+					"name": "buttonId",
 					"type": "number",
 					"placeholder": {
-						"en": "ringerId",
+						"en": "buttonId",
 						"nl": "drukkerId"
 					},
 					"min": 0,

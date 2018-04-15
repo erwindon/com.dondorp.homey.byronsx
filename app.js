@@ -182,19 +182,19 @@ mySignal.register()
 			//console.log('received: signal:[' + payload + '], first:' + first);
 
 			// take the relevant groups of bits
-			var ringerBits = payload.slice(0, 8);
+			var buttonBits = payload.slice(0, 8);
 			var melodyBits = payload.slice(8, 12);
 
 			// get the values from the bit-patterns
-			var ringerId =
-				ringerBits[0] * 128 +
-				ringerBits[1] * 64 +
-				ringerBits[2] * 32 +
-				ringerBits[3] * 16 +
-				ringerBits[4] * 8 +
-				ringerBits[5] * 4 +
-				ringerBits[6] * 2 +
-				ringerBits[7] * 1;
+			var buttonId =
+				buttonBits[0] * 128 +
+				buttonBits[1] * 64 +
+				buttonBits[2] * 32 +
+				buttonBits[3] * 16 +
+				buttonBits[4] * 8 +
+				buttonBits[5] * 4 +
+				buttonBits[6] * 2 +
+				buttonBits[7] * 1;
 			var melodyId =
 				melodyBits[0] * 8 +
 				melodyBits[1] * 4 +
@@ -210,16 +210,16 @@ mySignal.register()
 			if(millis < 5000)
 			{
 				// Accept only one ring within 5 seconds
-				// console.log('IGNORED ringer: [' + ringerBits + ']=' + ringerId + ', melody: [' + melodyBits + ']=' + melodyId + "(" + melodyNr + "), first: " + first);
+				// console.log('IGNORED button: [' + buttonBits + ']=' + buttonId + ', melody: [' + melodyBits + ']=' + melodyId + "(" + melodyNr + "), first: " + first);
 				return;
 			}
 
 			lastRing = now;
 
-			console.log('ringer: [' + ringerBits + ']=' + ringerId + ', melody: [' + melodyBits + ']=' + melodyId);
+			console.log('button: [' + buttonBits + ']=' + buttonId + ', melody: [' + melodyBits + ']=' + melodyId);
 
 			var tokens = {
-				'ringerId': ringerId,
+				'buttonId': buttonId,
 				'melodyId': melodyId,
 				'melodyNr': melodyNr
 				};
@@ -253,21 +253,21 @@ ringBellActionNrF.register();
 let ringBellActionId = new Homey.FlowCardAction('send_ring_signal_id');
 ringBellActionId.register();
 
-function getBits(ringerId, melodyId)
+function getBits(buttonId, melodyId)
 {
 	// +256 to force fixed length of 9 bits
 	// then use bits 1..8 (but not bit 0)
-	var ringerIdBits = (ringerId + 256).toString(2);
+	var buttonIdBits = (buttonId + 256).toString(2);
 	var melodyIdBits = (melodyId + 16).toString(2);
 	return [
-			parseInt(ringerIdBits[1]),
-			parseInt(ringerIdBits[2]),
-			parseInt(ringerIdBits[3]),
-			parseInt(ringerIdBits[4]),
-			parseInt(ringerIdBits[5]),
-			parseInt(ringerIdBits[6]),
-			parseInt(ringerIdBits[7]),
-			parseInt(ringerIdBits[8]),
+			parseInt(buttonIdBits[1]),
+			parseInt(buttonIdBits[2]),
+			parseInt(buttonIdBits[3]),
+			parseInt(buttonIdBits[4]),
+			parseInt(buttonIdBits[5]),
+			parseInt(buttonIdBits[6]),
+			parseInt(buttonIdBits[7]),
+			parseInt(buttonIdBits[8]),
 			parseInt(melodyIdBits[1]),
 			parseInt(melodyIdBits[2]),
 			parseInt(melodyIdBits[3]),
@@ -278,49 +278,49 @@ function getBits(ringerId, melodyId)
 class ByronSxDoorbell extends Homey.App {
 	onInit() {
 		ringBellActionNrA.registerRunListener((args, state) => {
-			var ringerId = args['ringerId']
+			var buttonId = args['buttonId']
 			var melodyNr = args['melodyNr']
-			this.log('RING-A: ringerId:' + ringerId + ', melodyNr:' + melodyNr);
+			this.log('RING-A: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
-			var bits = getBits(ringerId, melodyId);
+			var bits = getBits(buttonId, melodyId);
 			mySignal.tx(bits, console.log);
 			return true;
 		});
 
 		ringBellActionNrB.registerRunListener((args, state) => {
-			var ringerId = args['ringerId']
+			var buttonId = args['buttonId']
 			var melodyNr = args['melodyNr']
-			this.log('RING-B: ringerId:' + ringerId + ', melodyNr:' + melodyNr);
+			this.log('RING-B: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
-			var bits = getBits(ringerId, melodyId);
+			var bits = getBits(buttonId, melodyId);
 			mySignal.tx(bits, console.log);
 			return true;
 		});
 
 		ringBellActionNrC.registerRunListener((args, state) => {
-			var ringerId = args['ringerId']
+			var buttonId = args['buttonId']
 			var melodyNr = args['melodyNr']
-			this.log('RING-C: ringerId:' + ringerId + ', melodyNr:' + melodyNr);
+			this.log('RING-C: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
-			var bits = getBits(ringerId, melodyId);
+			var bits = getBits(buttonId, melodyId);
 			mySignal.tx(bits, console.log);
 			return true;
 		});
 
 		ringBellActionNrD.registerRunListener((args, state) => {
-			var ringerId = args['ringerId']
+			var buttonId = args['buttonId']
 			var melodyNr = args['melodyNr']
-			this.log('RING-D: ringerId:' + ringerId + ', melodyNr:' + melodyNr);
+			this.log('RING-D: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
-			var bits = getBits(ringerId, melodyId);
+			var bits = getBits(buttonId, melodyId);
 			mySignal.tx(bits, console.log);
 			return true;
 		});
 
 		ringBellActionNrE.registerRunListener((args, state) => {
-			var ringerId = args['ringerId']
-			this.log('RING-E: ringerId:' + ringerId);
-			var bits = getBits(ringerId, 0);
+			var buttonId = args['buttonId']
+			this.log('RING-E: buttonId:' + buttonId);
+			var bits = getBits(buttonId, 0);
 			mySignal.tx(bits, console.log);
 			return true;
 		});
@@ -336,10 +336,10 @@ class ByronSxDoorbell extends Homey.App {
 		});
 
 		ringBellActionId.registerRunListener((args, state) => {
-			var ringerId = args['ringerId']
+			var buttonId = args['buttonId']
 			var melodyId = args['melodyId']
-			this.log('RING: ringerId:' + ringerId + ', melodyId:' + melodyId);
-			var bits = getBits(ringerId, melodyId);
+			this.log('RING: buttonId:' + buttonId + ', melodyId:' + melodyId);
+			var bits = getBits(buttonId, melodyId);
 			this.log("bits:", bits);
 			mySignal.tx(bits, console.log);
 			return true;
