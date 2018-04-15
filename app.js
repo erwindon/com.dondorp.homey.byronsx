@@ -115,6 +115,8 @@
 'use strict';
 
 const Homey = require('homey');
+const Global = require('../drivers/global.js');
+Global.buttons = {};
 
 // remember when the bell last sounded
 // so that we don't trigger too often
@@ -217,6 +219,8 @@ mySignal.register()
 			lastRing = now;
 
 			console.log('button: [' + buttonBits + ']=' + buttonId + ', melody: [' + melodyBits + ']=' + melodyId);
+
+		    Global.buttons[buttonId] = melodyId;
 
 			var tokens = {
 				'buttonId': buttonId,
