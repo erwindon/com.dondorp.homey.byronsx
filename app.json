@@ -83,7 +83,7 @@
 		],
 		"actions": [
 		{
-			"id": "send_ring_signal_nrA",
+			"id": "send_ring_melodynrA_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
@@ -108,60 +108,60 @@
 					"type": "dropdown",
 					"values":
 					[
-							{ "id": "1",
-								"label":{
-									"en": "Tubular 3-notes",
-									"nl": "Buizen 3 noten"
-								}
-							},
-							{ "id": "2",
-								"label":{
-									"en": "Big Ben",
-									"nl": "Big Ben"
-								}
-							},
-							{ "id": "3",
-								"label":{
-									"en": "Tubular 2-notes",
-									"nl": "Buizen 2 noten"
-								}
-							},
-							{ "id": "4",
-								"label":{
-									"en": "Solo",
-									"nl": "Solo"
-								}
-							},
-							{ "id": "5",
-								"label":{
-									"en": "Tubular Scare",
-									"nl": "Buizendans"
-								}
-							},
-							{ "id": "6",
-								"label":{
-									"en": "Clarinet",
-									"nl": "Klarinet"
-								}
-							},
-							{ "id": "7",
-								"label":{
-									"en": "Saxophone",
-									"nl": "Saxofoon"
-								}
-							},
-							{ "id": "8",
-								"label":{
-									"en": "Morning Dew",
-									"nl": "Ochtendgloren"
-								}
+						{ "id": "1",
+							"label":{
+								"en": "Tubular 3-notes",
+								"nl": "Buizen 3 noten"
 							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Big Ben",
+								"nl": "Big Ben"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Tubular 2-notes",
+								"nl": "Buizen 2 noten"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Solo",
+								"nl": "Solo"
+							}
+						},
+						{ "id": "5",
+							"label":{
+								"en": "Tubular Scare",
+								"nl": "Buizendans"
+							}
+						},
+						{ "id": "6",
+							"label":{
+								"en": "Clarinet",
+								"nl": "Klarinet"
+							}
+						},
+						{ "id": "7",
+							"label":{
+								"en": "Saxophone",
+								"nl": "Saxofoon"
+							}
+						},
+						{ "id": "8",
+							"label":{
+								"en": "Morning Dew",
+								"nl": "Ochtendgloren"
+							}
+						}
 					]
 				}
 			]
 		},
 		{
-			"id": "send_ring_signal_nrB",
+			"id": "send_ring_melodynrB_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
@@ -186,36 +186,36 @@
 					"type": "dropdown",
 					"values":
 					[
-							{ "id": "1",
-								"label":{
-									"en": "Tubular 3-notes",
-									"nl": "Buizen 3 noten"
-								}
-							},
-							{ "id": "2",
-								"label":{
-									"en": "Big Ben",
-									"nl": "Big Ben"
-								}
-							},
-							{ "id": "3",
-								"label":{
-									"en": "Tubular 2-notes",
-									"nl": "Buizen 2 noten"
-								}
-							},
-							{ "id": "4",
-								"label":{
-									"en": "Solo",
-									"nl": "Solo"
-								}
+						{ "id": "1",
+							"label":{
+								"en": "Tubular 3-notes",
+								"nl": "Buizen 3 noten"
 							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Big Ben",
+								"nl": "Big Ben"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Tubular 2-notes",
+								"nl": "Buizen 2 noten"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Solo",
+								"nl": "Solo"
+							}
+						}
 					]
 				}
 			]
 		},
 		{
-			"id": "send_ring_signal_nrC",
+			"id": "send_ring_melodynrC_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
@@ -240,60 +240,60 @@
 					"type": "dropdown",
 					"values":
 					[
-							{ "id": "1",
-								"label":{
-									"en": "Electro Mechanical - Ding Dong",
-									"nl": "Electro-mechanisch - Ding Dong"
-								}
-							},
-							{ "id": "2",
-								"label":{
-									"en": "Westminster - 8 notes",
-									"nl": "Westminster - 8 noten"
-								}
-							},
-							{ "id": "3",
-								"label":{
-									"en": "Jive",
-									"nl": "Jive"
-								}
-							},
-							{ "id": "4",
-								"label":{
-									"en": "Wedding March",
-									"nl": "Huwelijksmars"
-								}
-							},
-							{ "id": "5",
-								"label":{
-									"en": "Piano",
-									"nl": "Piano"
-								}
-							},
-							{ "id": "6",
-								"label":{
-									"en": "Harmony",
-									"nl": "Harmonie"
-								}
-							},
-							{ "id": "7",
-								"label":{
-									"en": "Dog Barking",
-									"nl": "Blaffende Hond"
-								}
-							},
-							{ "id": "8",
-								"label":{
-									"en": "Ringer",
-									"nl": "Ringer"
-								}
+						{ "id": "1",
+							"label":{
+								"en": "Electro Mechanical - Ding Dong",
+								"nl": "Electro-mechanisch - Ding Dong"
 							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Westminster - 8 notes",
+								"nl": "Westminster - 8 noten"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Jive",
+								"nl": "Jive"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Wedding March",
+								"nl": "Huwelijksmars"
+							}
+						},
+						{ "id": "5",
+							"label":{
+								"en": "Piano",
+								"nl": "Piano"
+							}
+						},
+						{ "id": "6",
+							"label":{
+								"en": "Harmony",
+								"nl": "Harmonie"
+							}
+						},
+						{ "id": "7",
+							"label":{
+								"en": "Dog Barking",
+								"nl": "Blaffende Hond"
+							}
+						},
+						{ "id": "8",
+							"label":{
+								"en": "Ringer",
+								"nl": "Ringer"
+							}
+						}
 					]
 				}
 			]
 		},
 		{
-			"id": "send_ring_signal_nrD",
+			"id": "send_ring_melodynrD_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
@@ -318,60 +318,60 @@
 					"type": "dropdown",
 					"values":
 					[
-							{ "id": "1",
-								"label":{
-									"en": "Westminster",
-									"nl": "Westminster"
-								}
-							},
-							{ "id": "2",
-								"label":{
-									"en": "Ding Dong Repeat",
-									"nl": "Ding Dong Repeat"
-								}
-							},
-							{ "id": "3",
-								"label":{
-									"en": "Telephone Ring",
-									"nl": "Telefoon Rinkel"
-								}
-							},
-							{ "id": "4",
-								"label":{
-									"en": "Circus Theme",
-									"nl": "Circus Thema"
-								}
-							},
-							{ "id": "5",
-								"label":{
-									"en": "Banjo on my Knee",
-									"nl": "Banjo on my Knee"
-								}
-							},
-							{ "id": "6",
-								"label":{
-									"en": "Twinkle Twinkle",
-									"nl": "Twinkle Twinkle"
-								}
-							},
-							{ "id": "7",
-								"label":{
-									"en": "It's a Small World",
-									"nl": "It's a Small World"
-								}
-							},
-							{ "id": "8",
-								"label":{
-									"en": "Dog Barking",
-									"nl": "Blaffende Hond"
-								}
+						{ "id": "1",
+							"label":{
+								"en": "Westminster",
+								"nl": "Westminster"
 							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Ding Dong Repeat",
+								"nl": "Ding Dong Repeat"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Telephone Ring",
+								"nl": "Telefoon Rinkel"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Circus Theme",
+								"nl": "Circus Thema"
+							}
+						},
+						{ "id": "5",
+							"label":{
+								"en": "Banjo on my Knee",
+								"nl": "Banjo on my Knee"
+							}
+						},
+						{ "id": "6",
+							"label":{
+								"en": "Twinkle Twinkle",
+								"nl": "Twinkle Twinkle"
+							}
+						},
+						{ "id": "7",
+							"label":{
+								"en": "It's a Small World",
+								"nl": "It's a Small World"
+							}
+						},
+						{ "id": "8",
+							"label":{
+								"en": "Dog Barking",
+								"nl": "Blaffende Hond"
+							}
+						}
 					]
 				}
 			]
 		},
 		{
-			"id": "send_ring_signal_nrE",
+			"id": "send_ring_melodynrE_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
@@ -394,7 +394,7 @@
 			]
 		},
 		{
-			"id": "send_ring_signal_nrF",
+			"id": "send_ring_melodynrF_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
@@ -419,36 +419,36 @@
 					"type": "dropdown",
 					"values":
 					[
-							{ "id": "1",
-								"label":{
-									"en": "Westminster Chime - 8 notes",
-									"nl": "Westminster Chime - 8 noten"
-								}
-							},
-							{ "id": "2",
-								"label":{
-									"en": "Ding-Dong - Repeat",
-									"nl": "Ding-Dong - Repeat"
-								}
-							},
-							{ "id": "3",
-								"label":{
-									"en": "Ding Dong Ding",
-									"nl": "Ding Dong Ding"
-								}
-							},
-							{ "id": "4",
-								"label":{
-									"en": "Alarm Tone",
-									"nl": "Alarm Toon"
-								}
+						{ "id": "1",
+							"label":{
+								"en": "Westminster Chime - 8 notes",
+								"nl": "Westminster Chime - 8 noten"
 							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Ding-Dong - Repeat",
+								"nl": "Ding-Dong - Repeat"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Ding Dong Ding",
+								"nl": "Ding Dong Ding"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Alarm Tone",
+								"nl": "Alarm Toon"
+							}
+						}
 					]
 				}
 			]
 		},
 		{
-			"id": "send_ring_signal_id",
+			"id": "send_ring_melodyid_generic",
 			"title": {
 				"en": "Ring the bell",
 				"nl": "Laat de bel klinken"
