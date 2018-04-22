@@ -156,8 +156,8 @@ var melodyIds = {
 	"8": 2,
 }
 
-let bellPressedTrigger = new Homey.FlowCardTrigger('receive_ring_signal');
-bellPressedTrigger.register();
+let buttonPressedTriggerGeneric = new Homey.FlowCardTrigger('receive_signal_generic');
+buttonPressedTriggerGeneric.register();
 
 // create & register a signal using the id from your app.json
 let mySignal = new Homey.Signal433('ByronSxSignal');
