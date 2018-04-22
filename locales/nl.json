@@ -1,0 +1,12 @@
+{
+	"pair" : {
+		"bell": {
+			"title": "Voorbereiding",
+			"explanation": "Byron SX drukknoppen and bellen gebruiken tot 256 verschillende beveiligingscodes. Maar Homey weet nog niet welke code in gebruik is.<br/><br/>Zorg dat de bel gepaired is met de drukknop. Dit proces is beschreven in de handleiding van de deurbel.<br/><br/>Druk nu op de drukknop om Homey de identificatie van de bel te leren. Dat is overigens verder niet zichtbaar op dit scherm."
+		},
+		"button": {
+			"title": "Voorbereiding",
+			"explanation": "Byron SX drukknoppen and bellen gebruiken tot 256 verschillende beveiligingscodes. Maar Homey weet nog niet welke code in gebruik is.<br/><br/>Zorg dat de drukknop gepaired is met de bel. Dit proces is beschreven in de handleiding van de deurbel.<br/><br/>Druk nu op de drukknop om Homey de identificatie van de bel te leren. Dat is overigens verder niet zichtbaar op dit scherm."
+		}
+	}
+}

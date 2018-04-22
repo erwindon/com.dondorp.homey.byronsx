@@ -87,6 +87,8 @@ The Byron SX series push buttons and bells all use the same 433MHz-based protoco
 Please report issues via [GitHub](https://github.com/erwindon/com.dondorp.homey.byronsx/issues). For other remarks and/or questions mail byronsx@dondorp.com.
 
 ### Version info
+* 1.1.0 Added support for pairing the buttons and bells with Homey
+
 * 1.0.0 First Athom App Store release candidate
 
 ----------

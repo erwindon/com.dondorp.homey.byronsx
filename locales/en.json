@@ -1,1 +1,12 @@
-{}
+{
+	"pair" : {
+		"bell": {
+			"title": "Preparation",
+			"explanation": "Byron SX buttons and bells use up to 256 different identification codes. But Homey does not yet know which one is used.<br/><br/>Make sure the bell is paired with the button. This process is described in the manual of the bell.<br/><br/>Press the button now to let Homey know the identification of the bell. Nothing will be indicated on this screen."
+		},
+		"button": {
+			"title": "Preparation",
+			"explanation": "Byron SX buttons and bells use up to 256 different identification codes. But Homey does not yet know which one is used.<br/><br/>Make sure the button is paired with the bell. This process is described in the manual of the bell.<br/><br/>Press the button now to let Homey know the identification of the button. Nothing will be indicated on this screen."
+		}
+	}
+}

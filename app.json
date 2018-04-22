@@ -1,6 +1,6 @@
 {
 	"id": "com.dondorp.homey.byronsx",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"compatibility": ">=1.5.0",
 	"sdk": 2,
 	"name": {
@@ -26,6 +26,66 @@
 		"name": "Erwin Dondorp",
 		"email": "byronsx@dondorp.com"
 	},
+	"drivers": [
+		{
+			"id": "ByronSxButton",
+			"name": {
+				"en": "Byron SX Button",
+				"nl": "Byron SX Knop"
+			},
+			"_comment": "Don't use class/capability 'button', this will make the Homey pretend it can push that button",
+			"class": "other",
+			"capabilities": [],
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "list_devices"
+					}
+				},
+				{
+					"id": "list_devices",
+					"template": "list_devices",
+					"navigation": {
+						"next": "add_devices"
+					}
+				},
+				{
+					"id": "add_devices",
+					"template": "add_devices"
+				}
+			]
+		},
+		{
+			"id": "ByronSxBell",
+			"name": {
+				"en": "Byron SX Bell",
+				"nl": "Byron SX Bel"
+			},
+			"_comment": "Don't use class/capability 'doorbell', this does not seem to do anything",
+			"class": "other",
+			"capabilities": [],
+			"pair": [
+				{
+					"id": "start",
+					"navigation": {
+						"next": "list_devices"
+					}
+				},
+				{
+					"id": "list_devices",
+					"template": "list_devices",
+					"navigation": {
+						"next": "add_devices"
+					}
+				},
+				{
+					"id": "add_devices",
+					"template": "add_devices"
+				}
+			]
+		}
+	],
 	"signals": {
 		"433": {
 			"ByronSxSignal": {
@@ -46,6 +106,49 @@
 	"flow": {
 		"triggers": [ {
 			"id": "receive_signal_generic",
+			"title": {
+				"en": "A doorbell is pressed",
+				"nl": "Een deurbel is ingedrukt"
+			},
+			"tokens": [
+				{
+					"name": "buttonId",
+					"type": "number",
+					"title": {
+						"en": "buttonId",
+						"nl": "drukkerId"
+					},
+					"example": 121
+				},
+				{
+					"name": "melodyId",
+					"type": "number",
+					"title": {
+						"en": "melodyId",
+						"nl": "melodieId"
+					},
+					"example": 3
+				},
+				{
+					"name": "melodyNr",
+					"type": "number",
+					"title": {
+						"en": "melodyNr",
+						"nl": "melodieNr"
+					},
+					"example": 2
+				}
+			]
+		},
+		{
+			"id": "receive_signal_paired",
+			"args": [
+				{
+				"name": "button_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxButton"
+				}
+			],
 			"title": {
 				"en": "The doorbell is pressed",
 				"nl": "De deurbel is ingedrukt"
@@ -467,6 +570,369 @@
 					},
 					"min": 0,
 					"max": 255
+				},
+				{
+					"name": "melodyId",
+					"type": "number",
+					"placeholder": {
+						"en": "melodyId",
+						"nl": "melodieId"
+					},
+					"min": 0,
+					"max": 15
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodynrA_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 and SX245 (8 sounds)",
+				"nl":"Ondersteunt SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 en SX245 (8 geluiden)"
+			},
+			"args": [
+				{
+				"name": "bell_nrA_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+						{ "id": "1",
+							"label":{
+								"en": "Tubular 3-notes",
+								"nl": "Buizen 3 noten"
+							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Big Ben",
+								"nl": "Big Ben"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Tubular 2-notes",
+								"nl": "Buizen 2 noten"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Solo",
+								"nl": "Solo"
+							}
+						},
+						{ "id": "5",
+							"label":{
+								"en": "Tubular Scare",
+								"nl": "Buizendans"
+							}
+						},
+						{ "id": "6",
+							"label":{
+								"en": "Clarinet",
+								"nl": "Klarinet"
+							}
+						},
+						{ "id": "7",
+							"label":{
+								"en": "Saxophone",
+								"nl": "Saxofoon"
+							}
+						},
+						{ "id": "8",
+							"label":{
+								"en": "Morning Dew",
+								"nl": "Ochtendgloren"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodynrB_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX6, SX7, SX21, SX80 and SX120 (4 sounds)",
+				"nl":"Ondersteunt SX6, SX7, SX21, SX80 en SX120 (4 geluiden)"
+			},
+			"args": [
+				{
+				"name": "bell_nrB_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+						{ "id": "1",
+							"label":{
+								"en": "Tubular 3-notes",
+								"nl": "Buizen 3 noten"
+							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Big Ben",
+								"nl": "Big Ben"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Tubular 2-notes",
+								"nl": "Buizen 2 noten"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Solo",
+								"nl": "Solo"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodynrC_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX72, SX201, SX202 and SX209 (8 alternative sounds)",
+				"nl":"Ondersteunt SX72, SX201, SX202 en SX209 (8 alternatieve geluiden)"
+			},
+			"args": [
+				{
+				"name": "bell_nrC_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+						{ "id": "1",
+							"label":{
+								"en": "Electro Mechanical - Ding Dong",
+								"nl": "Electro-mechanisch - Ding Dong"
+							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Westminster - 8 notes",
+								"nl": "Westminster - 8 noten"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Jive",
+								"nl": "Jive"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Wedding March",
+								"nl": "Huwelijksmars"
+							}
+						},
+						{ "id": "5",
+							"label":{
+								"en": "Piano",
+								"nl": "Piano"
+							}
+						},
+						{ "id": "6",
+							"label":{
+								"en": "Harmony",
+								"nl": "Harmonie"
+							}
+						},
+						{ "id": "7",
+							"label":{
+								"en": "Dog Barking",
+								"nl": "Blaffende Hond"
+							}
+						},
+						{ "id": "8",
+							"label":{
+								"en": "Ringer",
+								"nl": "Ringer"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodynrD_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX81, SX86 and SX204 (8 alternative sounds)",
+				"nl":"Ondersteunt SX81, SX86 en SX204 (8 alternatieve geluiden)"
+			},
+			"args": [
+				{
+				"name": "bell_nrD_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+						{ "id": "1",
+							"label":{
+								"en": "Westminster",
+								"nl": "Westminster"
+							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Ding Dong Repeat",
+								"nl": "Ding Dong Repeat"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Telephone Ring",
+								"nl": "Telefoon Rinkel"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Circus Theme",
+								"nl": "Circus Thema"
+							}
+						},
+						{ "id": "5",
+							"label":{
+								"en": "Banjo on my Knee",
+								"nl": "Banjo on my Knee"
+							}
+						},
+						{ "id": "6",
+							"label":{
+								"en": "Twinkle Twinkle",
+								"nl": "Twinkle Twinkle"
+							}
+						},
+						{ "id": "7",
+							"label":{
+								"en": "It's a Small World",
+								"nl": "It's a Small World"
+							}
+						},
+						{ "id": "8",
+							"label":{
+								"en": "Dog Barking",
+								"nl": "Blaffende Hond"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodynrE_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX5i, SX15, SX15i, SX60i and SX252 (mechanical bell)",
+				"nl":"Ondersteunt SX5i, SX15, SX15i, SX60i en SX252 (mechanische bel)"
+			},
+			"args": [
+				{
+				"name": "bell_nrE_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodynrF_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Supports SX83 and SX823 (4 alternative sounds)",
+				"nl":"Ondersteunt SX83 en SX823 (4 alternatieve geluiden)"
+			},
+			"args": [
+				{
+				"name": "bell_nrF_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
+				},
+				{
+					"name": "melodyNr",
+					"type": "dropdown",
+					"values":
+					[
+						{ "id": "1",
+							"label":{
+								"en": "Westminster Chime - 8 notes",
+								"nl": "Westminster Chime - 8 noten"
+							}
+						},
+						{ "id": "2",
+							"label":{
+								"en": "Ding-Dong - Repeat",
+								"nl": "Ding-Dong - Repeat"
+							}
+						},
+						{ "id": "3",
+							"label":{
+								"en": "Ding Dong Ding",
+								"nl": "Ding Dong Ding"
+							}
+						},
+						{ "id": "4",
+							"label":{
+								"en": "Alarm Tone",
+								"nl": "Alarm Toon"
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "send_ring_melodyid_paired",
+			"title": {
+				"en": "Ring the bell",
+				"nl": "Laat de bel klinken"
+			},
+			"hint": {
+				"en":"Use an internal melody-id, the protocol supports the values 0..15. Typically the first useful value is 1.",
+				"nl":"Gebruik een intern melody-id, het protocol ondersteunt de waarden 0..15. De eerste bruikbare waarde is meestal 1."
+			},
+			"args": [
+				{
+				"name": "bell_id_paired",
+				"type": "device",
+				"filter": "driver_id=ByronSxBell"
 				},
 				{
 					"name": "melodyId",
