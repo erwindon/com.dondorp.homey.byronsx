@@ -454,8 +454,8 @@
 				"nl": "Laat de bel klinken"
 			},
 			"hint": {
-				"en":"Use an internal melody-id, the protocol supports the values 0..15",
-				"nl":"Gebruik een intern melody-id, het protocol ondersteunt de waarden 0..15"
+				"en":"Use an internal melody-id, the protocol supports the values 0..15. Typically the first useful value is 1.",
+				"nl":"Gebruik een intern melody-id, het protocol ondersteunt de waarden 0..15. De eerste bruikbare waarde is meestal 1."
 			},
 			"args": [
 				{

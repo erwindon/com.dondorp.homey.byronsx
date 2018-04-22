@@ -323,8 +323,8 @@ class ByronSxDoorbell extends Homey.App {
 
 		ringBellActionNrEGeneric.registerRunListener((args, state) => {
 			var buttonId = args['buttonId']
-			var bits = getBits(buttonId, 0);
 			this.log('RING-E-GENERIC: buttonId:' + buttonId);
+			var bits = getBits(buttonId, 1);
 			byronSxSignal.tx(bits, console.log);
 			return true;
 		});
