@@ -218,7 +218,7 @@ byronSxSignal.register()
 
 			lastRing = now;
 
-			console.log('button: [' + buttonBits + ']=' + buttonId + ', melody: [' + melodyBits + ']=' + melodyId);
+			console.log('buttonId: [' + buttonBits + ']=' + buttonId + ', melodyId: [' + melodyBits + ']=' + melodyId + ', melodyNr: ' + melodyNr);
 
 		    Global.buttons[buttonId] = melodyId;
 
