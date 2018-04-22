@@ -115,13 +115,12 @@
 'use strict';
 
 const Homey = require('homey');
-const Global = require('../drivers/global.js');
-Global.buttons = {};
 
-// remember when the bell last sounded
+// remember when the bells last sounded
 // so that we don't trigger too often
-// currently a global setting (not per bell)
-var lastRing = Date.now();
+// and so that we can help with pairing
+const Global = require('../drivers/global.js');
+Global.allLastRings = {};
 
 // The internal IDs are different from the melody numbers
 // This translation table converts from ID to melody-number
@@ -210,20 +209,23 @@ byronSxSignal.register()
 
 			// Controller seems to return multiple events with "first=true"
 			// Therefore we use our own mechanism
+			// Administation is per buttonId
+			// Allow quick changes of melodyId
 			var now = Date.now();
-			var millis = now - lastRing;
-			if(millis < 5000)
+			var lastRing = Global.allLastRings[buttonId];
+			if(lastRing === undefined)
+				lastRing = {"dateTime":0, "melodyId":-1};
+			var millis = now - lastRing.dateTime;
+			if(millis < 5000 && melodyId == lastRing.melodyId)
 			{
 				// Accept only one ring within 5 seconds
 				// console.log('IGNORED button: [' + buttonBits + ']=' + buttonId + ', melody: [' + melodyBits + ']=' + melodyId + "(" + melodyNr + "), first: " + first);
 				return;
 			}
 
-			lastRing = now;
+			Global.allLastRings[buttonId] = {"dateTime":now, "melodyId":melodyId};
 
 			console.log('buttonId: [' + buttonBits + ']=' + buttonId + ', melodyId: [' + melodyBits + ']=' + melodyId + ', melodyNr: ' + melodyNr);
-
-			Global.buttons[buttonId] = melodyId;
 
 			var tokens = {
 				'buttonId': buttonId,

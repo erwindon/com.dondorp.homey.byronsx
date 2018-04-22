@@ -10,12 +10,12 @@ class ByronSxBell extends Homey.Driver {
 
 		let devices = [];
 
-		for(var r in Global.buttons)
+		for(var buttonId in Global.allLastRings)
 		{
-			var d = {}
-			d["name"] = "Bell-#" + r;
-			d["data"] = {"buttonId": r}
-			devices.push(d);
+			var device = {}
+			device["name"] = "Bell-#" + buttonId;
+			device["data"] = {"buttonId": buttonId}
+			devices.push(device);
 		}
 
 		callback(null, devices);
@@ -29,15 +29,15 @@ class ByronSxBell extends Homey.Driver {
 		console.log("getDevices");
 		let devices = [];
 
-		for(var r in Global.buttons)
+		for(var buttonId in Global.allLastRings)
 		{
-			var d = {}
-			d["name"] = "Button-#" + r;
-			d["data"] = {"buttonId": r}
-			devices.push(d);
+			var device = {}
+			device["name"] = "Button-#" + buttonId;
+			device["data"] = {"buttonId": buttonId}
+			devices.push(device);
 		}
 
-		return devices
+		return devices;
 	}
 
 }
