@@ -229,19 +229,27 @@ byronSxSignal.register()
 
 			console.log('buttonId: [' + buttonBits + ']=' + buttonId + ', melodyId: [' + melodyBits + ']=' + melodyId + ', melodyNr: ' + melodyNr);
 
-			var tokens = {
+			var tokensGeneric = {
 				'buttonId': buttonId,
 				'melodyId': melodyId,
 				'melodyNr': melodyNr
 				};
-
+			var stateGeneric = {
+				};
 			buttonPressedTriggerGeneric
-				.trigger(tokens, tokens)
+				.trigger(tokensGeneric, stateGeneric)
 				.catch(this.error)
 				.then(this.log);
 
+			var tokensPaired = {
+				'buttonId': buttonId,
+				'melodyId': melodyId,
+				'melodyNr': melodyNr
+				};
+			var statePaired = {
+				};
 			buttonPressedTriggerPaired
-				.trigger(tokens, tokens)
+				.trigger(tokensPaired, statePaired)
 				.catch(this.error)
 				.then(this.log);
 		})
