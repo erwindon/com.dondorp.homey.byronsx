@@ -25,20 +25,21 @@ class ByronSxBell extends Homey.Driver {
 		console.log("onInit Bell");
 	}
 
-	getDevices() {
-		console.log("getDevices");
-		let devices = [];
-
-		for(var buttonId in Global.allLastRings)
-		{
-			var device = {}
-			device["name"] = "Button-#" + buttonId;
-			device["data"] = {"buttonId": buttonId}
-			devices.push(device);
-		}
-
-		return devices;
-	}
+// future use; show live device list when pairing
+//	getDevices() {
+//		this.log("getDevices");
+//		let devices = [];
+//
+//		for(var buttonId in Global.allLastRings)
+//		{
+//			var device = {}
+//			device["name"] = "Bell-#" + buttonId;
+//			device["data"] = {"buttonId": buttonId}
+//			devices.push(device);
+//		}
+//
+//		return devices;
+//	}
 
 }
 
