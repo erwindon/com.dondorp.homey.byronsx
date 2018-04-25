@@ -7,7 +7,7 @@ class ByronSxBell extends Homey.Driver {
 
 	// this is the easiest method to overwrite, when only the template 'Drivers-Pairing-System-Views' is being used.
 	onPairListDevices( data, callback ) {
-
+		this.log("onPairListDevices");
 		let devices = [];
 
 		for(var buttonId in Global.allLastRings)
@@ -22,7 +22,7 @@ class ByronSxBell extends Homey.Driver {
 	}
 
 	onInit() {
-		console.log("onInit Bell");
+		this.log("onInit Bell");
 	}
 
 // future use; show live device list when pairing

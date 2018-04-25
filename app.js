@@ -165,6 +165,8 @@ buttonPressedTriggerPaired.register();
 let byronSxSignal = new Homey.Signal433('ByronSxSignal');
 byronSxSignal.register()
 	.then(() => {
+		console.log("byronSxSignal.register.then");
+
 		// Analysis for melodyBits:
 		// payload: 0,0,1,0,0,1,0,1,0,0,0,1 Tubular 3-notes
 		// payload: 0,0,1,0,0,1,0,1,0,0,1,1 Big Ben
@@ -311,14 +313,21 @@ function getBits(buttonId, melodyId)
 }
 
 class ByronSxDoorbell extends Homey.App {
+
+	logit(err, result) {
+		console.log("err: " + err + ", result: " + result);
+	}
+
 	onInit() {
+		this.log("ByronSxDoorbell.onInit");
+
 		ringBellActionNrAGeneric.registerRunListener((args, state) => {
 			var buttonId = args['buttonId']
 			var melodyNr = args['melodyNr']
 			this.log('RING-A-GENERIC: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -328,7 +337,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-B-GENERIC: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -338,7 +347,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-C-GENERIC: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -348,7 +357,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-D-GENERIC: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -356,7 +365,7 @@ class ByronSxDoorbell extends Homey.App {
 			var buttonId = args['buttonId']
 			this.log('RING-E-GENERIC: buttonId:' + buttonId);
 			var bits = getBits(buttonId, 1);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -366,7 +375,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-F-GENERIC: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -376,7 +385,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-ID-GENERIC: buttonId:' + buttonId + ', melodyId:' + melodyId);
 			var bits = getBits(buttonId, melodyId);
 			this.log("bits:", bits);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -387,7 +396,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-A-PAIRED: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -397,7 +406,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-B-PAIRED: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -407,7 +416,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-C-PAIRED: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -417,7 +426,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-D-PAIRED: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -425,7 +434,7 @@ class ByronSxDoorbell extends Homey.App {
 			var buttonId = parseInt(args['bell_nrE_paired'].getData()["buttonId"]);
 			this.log('RING-E-PAIRED: buttonId:' + buttonId);
 			var bits = getBits(buttonId, 1);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -435,7 +444,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-F-PAIRED: buttonId:' + buttonId + ', melodyNr:' + melodyNr);
 			var melodyId = melodyIds[melodyNr];
 			var bits = getBits(buttonId, melodyId);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
@@ -445,7 +454,7 @@ class ByronSxDoorbell extends Homey.App {
 			this.log('RING-ID-PAIRED: buttonId:' + buttonId + ', melodyId:' + melodyId);
 			var bits = getBits(buttonId, melodyId);
 			this.log("bits:", bits);
-			byronSxSignal.tx(bits, console.log);
+			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
 
