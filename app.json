@@ -90,7 +90,7 @@
 		"433": {
 			"ByronSxSignal": {
 				"sof": [ 314 ],
-				"eof": [],
+				"eof": [ ],
 				"words": [
 					[ 364, 641 ],
 					[ 706, 305 ]
@@ -212,49 +212,49 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Tubular 3-notes",
 								"nl": "Buizen 3 noten"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Big Ben",
 								"nl": "Big Ben"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Tubular 2-notes",
 								"nl": "Buizen 2 noten"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Solo",
 								"nl": "Solo"
 							}
 						},
 						{ "id": "5",
-							"label":{
+							"label": {
 								"en": "Tubular Scare",
 								"nl": "Buizendans"
 							}
 						},
 						{ "id": "6",
-							"label":{
+							"label": {
 								"en": "Clarinet",
 								"nl": "Klarinet"
 							}
 						},
 						{ "id": "7",
-							"label":{
+							"label": {
 								"en": "Saxophone",
 								"nl": "Saxofoon"
 							}
 						},
 						{ "id": "8",
-							"label":{
+							"label": {
 								"en": "Morning Dew",
 								"nl": "Ochtendgloren"
 							}
@@ -290,25 +290,25 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Tubular 3-notes",
 								"nl": "Buizen 3 noten"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Big Ben",
 								"nl": "Big Ben"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Tubular 2-notes",
 								"nl": "Buizen 2 noten"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Solo",
 								"nl": "Solo"
 							}
@@ -344,49 +344,49 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Electro Mechanical - Ding Dong",
 								"nl": "Electro-mechanisch - Ding Dong"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Westminster - 8 notes",
 								"nl": "Westminster - 8 noten"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Jive",
 								"nl": "Jive"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Wedding March",
 								"nl": "Huwelijksmars"
 							}
 						},
 						{ "id": "5",
-							"label":{
+							"label": {
 								"en": "Piano",
 								"nl": "Piano"
 							}
 						},
 						{ "id": "6",
-							"label":{
+							"label": {
 								"en": "Harmony",
 								"nl": "Harmonie"
 							}
 						},
 						{ "id": "7",
-							"label":{
+							"label": {
 								"en": "Dog Barking",
 								"nl": "Blaffende Hond"
 							}
 						},
 						{ "id": "8",
-							"label":{
+							"label": {
 								"en": "Ringer",
 								"nl": "Ringer"
 							}
@@ -422,49 +422,49 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Westminster",
 								"nl": "Westminster"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Ding Dong Repeat",
 								"nl": "Ding Dong Repeat"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Telephone Ring",
 								"nl": "Telefoon Rinkel"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Circus Theme",
 								"nl": "Circus Thema"
 							}
 						},
 						{ "id": "5",
-							"label":{
+							"label": {
 								"en": "Banjo on my Knee",
 								"nl": "Banjo on my Knee"
 							}
 						},
 						{ "id": "6",
-							"label":{
+							"label": {
 								"en": "Twinkle Twinkle",
 								"nl": "Twinkle Twinkle"
 							}
 						},
 						{ "id": "7",
-							"label":{
+							"label": {
 								"en": "It's a Small World",
 								"nl": "It's a Small World"
 							}
 						},
 						{ "id": "8",
-							"label":{
+							"label": {
 								"en": "Dog Barking",
 								"nl": "Blaffende Hond"
 							}
@@ -523,25 +523,25 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Westminster Chime - 8 notes",
 								"nl": "Westminster Chime - 8 noten"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Ding-Dong - Repeat",
 								"nl": "Ding-Dong - Repeat"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Ding Dong Ding",
 								"nl": "Ding Dong Ding"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Alarm Tone",
 								"nl": "Alarm Toon"
 							}
@@ -605,49 +605,49 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Tubular 3-notes",
 								"nl": "Buizen 3 noten"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Big Ben",
 								"nl": "Big Ben"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Tubular 2-notes",
 								"nl": "Buizen 2 noten"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Solo",
 								"nl": "Solo"
 							}
 						},
 						{ "id": "5",
-							"label":{
+							"label": {
 								"en": "Tubular Scare",
 								"nl": "Buizendans"
 							}
 						},
 						{ "id": "6",
-							"label":{
+							"label": {
 								"en": "Clarinet",
 								"nl": "Klarinet"
 							}
 						},
 						{ "id": "7",
-							"label":{
+							"label": {
 								"en": "Saxophone",
 								"nl": "Saxofoon"
 							}
 						},
 						{ "id": "8",
-							"label":{
+							"label": {
 								"en": "Morning Dew",
 								"nl": "Ochtendgloren"
 							}
@@ -678,25 +678,25 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Tubular 3-notes",
 								"nl": "Buizen 3 noten"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Big Ben",
 								"nl": "Big Ben"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Tubular 2-notes",
 								"nl": "Buizen 2 noten"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Solo",
 								"nl": "Solo"
 							}
@@ -727,49 +727,49 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Electro Mechanical - Ding Dong",
 								"nl": "Electro-mechanisch - Ding Dong"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Westminster - 8 notes",
 								"nl": "Westminster - 8 noten"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Jive",
 								"nl": "Jive"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Wedding March",
 								"nl": "Huwelijksmars"
 							}
 						},
 						{ "id": "5",
-							"label":{
+							"label": {
 								"en": "Piano",
 								"nl": "Piano"
 							}
 						},
 						{ "id": "6",
-							"label":{
+							"label": {
 								"en": "Harmony",
 								"nl": "Harmonie"
 							}
 						},
 						{ "id": "7",
-							"label":{
+							"label": {
 								"en": "Dog Barking",
 								"nl": "Blaffende Hond"
 							}
 						},
 						{ "id": "8",
-							"label":{
+							"label": {
 								"en": "Ringer",
 								"nl": "Ringer"
 							}
@@ -800,49 +800,49 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Westminster",
 								"nl": "Westminster"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Ding Dong Repeat",
 								"nl": "Ding Dong Repeat"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Telephone Ring",
 								"nl": "Telefoon Rinkel"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Circus Theme",
 								"nl": "Circus Thema"
 							}
 						},
 						{ "id": "5",
-							"label":{
+							"label": {
 								"en": "Banjo on my Knee",
 								"nl": "Banjo on my Knee"
 							}
 						},
 						{ "id": "6",
-							"label":{
+							"label": {
 								"en": "Twinkle Twinkle",
 								"nl": "Twinkle Twinkle"
 							}
 						},
 						{ "id": "7",
-							"label":{
+							"label": {
 								"en": "It's a Small World",
 								"nl": "It's a Small World"
 							}
 						},
 						{ "id": "8",
-							"label":{
+							"label": {
 								"en": "Dog Barking",
 								"nl": "Blaffende Hond"
 							}
@@ -891,25 +891,25 @@
 					"values":
 					[
 						{ "id": "1",
-							"label":{
+							"label": {
 								"en": "Westminster Chime - 8 notes",
 								"nl": "Westminster Chime - 8 noten"
 							}
 						},
 						{ "id": "2",
-							"label":{
+							"label": {
 								"en": "Ding-Dong - Repeat",
 								"nl": "Ding-Dong - Repeat"
 							}
 						},
 						{ "id": "3",
-							"label":{
+							"label": {
 								"en": "Ding Dong Ding",
 								"nl": "Ding Dong Ding"
 							}
 						},
 						{ "id": "4",
-							"label":{
+							"label": {
 								"en": "Alarm Tone",
 								"nl": "Alarm Toon"
 							}
