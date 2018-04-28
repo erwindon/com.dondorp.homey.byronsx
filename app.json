@@ -33,6 +33,10 @@
 				"en": "Byron SX Button",
 				"nl": "Byron SX Knop"
 			},
+			"images": {
+				"large": "/drivers/ByronSxButton/assets/images/large.png",
+				"small": "/drivers/ByronSxButton/assets/images/small.png"
+			},
 			"_comment": "Don't use class/capability 'button', this will make the Homey pretend it can push that button",
 			"class": "other",
 			"capabilities": [],
@@ -61,6 +65,10 @@
 			"name": {
 				"en": "Byron SX Bell",
 				"nl": "Byron SX Bel"
+			},
+			"images": {
+				"large": "/drivers/ByronSxBell/assets/images/large.png",
+				"small": "/drivers/ByronSxBell/assets/images/small.png"
 			},
 			"_comment": "Don't use class/capability 'doorbell', this does not seem to do anything",
 			"class": "other",
