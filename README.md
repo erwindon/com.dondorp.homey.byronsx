@@ -78,7 +78,7 @@ Contains the internal ID of the button that is recognized by the bell. This is a
 * melodyNr:
 Contains the melody that should be played by the bell. You can select the melody from a dropdown list. When you select the proper card, the list of melodies should exactly match with what is possible. This parameter is not available for bells that have only one melody.
 * melodyId:
-Contains the melody that should be played by the bell. You can select the melody by its internal number. Not that the internal numbers are not equal to the sequence number suggested by the dropdown lists.
+Contains the melody that should be played by the bell. You can select the melody by its internal number. Note that the internal numbers are not equal to the sequence number suggested by the dropdown lists.
 
 You may create more complicated scenarios where you let the Homey flow decide whether or not to send a command to the bell. First pair be bell so that it has a known internal ID. Then remove the batteries from the push button and reinsert them. This gives the push button a new random internal ID. Unless you are unlucky, the push button now has a different internal ID than the bell. You can use this to let your Homey decide whether the bell should indeed ring.
 
@@ -94,7 +94,7 @@ Please report issues via [GitHub](https://github.com/erwindon/com.dondorp.homey.
 
 ----------
 
-Copyright (c) 2018 Erwin Dondorp
+Copyright (c) 2018-2020 Erwin Dondorp
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
