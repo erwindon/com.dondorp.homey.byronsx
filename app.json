@@ -104,7 +104,7 @@
 					[ 706, 305 ]
 				],
 				"interval": 2728,
-				"xsensitivity": 0.7,
+				"sensitivity": 0.3,
 				"repetitions": 42,
 				"minimalLength": 12,
 				"maximalLength": 12
