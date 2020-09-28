@@ -158,19 +158,10 @@
 				}
 			],
 			"title": {
-				"en": "The doorbell is pressed",
-				"nl": "De deurbel is ingedrukt"
+				"en": "This doorbell is pressed",
+				"nl": "Deze deurbel is ingedrukt"
 			},
 			"tokens": [
-				{
-					"name": "buttonId",
-					"type": "number",
-					"title": {
-						"en": "buttonId",
-						"nl": "drukkerId"
-					},
-					"example": 121
-				},
 				{
 					"name": "melodyId",
 					"type": "number",

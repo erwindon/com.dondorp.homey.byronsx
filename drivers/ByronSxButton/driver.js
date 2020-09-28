@@ -13,7 +13,7 @@ class ByronSxButton extends Homey.Driver {
 		for(var buttonId in Global.allLastRings)
 		{
 			var device = {}
-			device["name"] = "Button-#" + buttonId;
+			device["name"] = "SX Button-#" + buttonId;
 			device["data"] = {"buttonId": buttonId}
 			devices.push(device);
 		}
@@ -33,7 +33,7 @@ class ByronSxButton extends Homey.Driver {
 //		for(var buttonId in Global.allLastRings)
 //		{
 //			var device = {}
-//			device["name"] = "Button-#" + buttonId;
+//			device["name"] = "SX Button-#" + buttonId;
 //			device["data"] = {"buttonId": buttonId}
 //			devices.push(device);
 //		}
