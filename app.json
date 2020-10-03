@@ -26,6 +26,11 @@
 		"name": "Erwin Dondorp",
 		"email": "byronsx@dondorp.com"
 	},
+	"bugs": {
+		"url": "https://github.com/erwindon/com.dondorp.homey.byronsx/issues"
+	},
+	"source": "https://github.com/erwindon/com.dondorp.homey.byronsx",
+	"support": "mailto:byronsx@dondorp.com",
 	"drivers": [
 		{
 			"id": "ByronSxButton",
