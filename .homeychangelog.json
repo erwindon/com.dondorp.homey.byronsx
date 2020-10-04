@@ -1,0 +1,14 @@
+{
+  "1.0.0": {
+    "en": "First Athom App Store release candidate",
+    "nl": "Eerste Athom App Store release candidate"
+  },
+  "1.1.0": {
+    "en": "Added support for pairing the buttons and chimes",
+    "nl": "Ondersteuning toegevoegd voor gepaarde drukkers en bellen"
+  },
+  "1.2.0": {
+    "en": "Fixed paired buttons and chimes",
+    "nl": "Gepaarde drukkers en bellen gerepareerd"
+  }
+}

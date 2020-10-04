@@ -85,11 +85,6 @@ You may create more complicated scenarios where you let the Homey flow decide wh
 #### Protocols
 The Byron SX series push buttons and bells all use the same 433MHz-based protocol. It uses a simple message consisting of 8 bits for the push button identification and 4 bits for the melody identification. This would suggest 256 possible IDs and 16 possible ringtones. Depending on the models of your push button and bell, less combinations may be in use.
 
-### Version info
-* 1.2.0 Fixed support for paired buttons
-* 1.1.0 Added support for pairing the buttons and bells with Homey
-* 1.0.0 First Athom App Store release candidate
-
 ----------
 
 Copyright (c) 2018-2020 Erwin Dondorp
