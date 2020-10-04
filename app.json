@@ -196,8 +196,8 @@
 				"nl": "Laat de bel klinken"
 			},
 			"hint": {
-				"en":"Supports SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 and SX245 (8 sounds)",
-				"nl":"Ondersteunt SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 en SX245 (8 geluiden)"
+				"en":"Supports SX1, SX4, SX8, SX11, SX14, SX20, SX34, SX40, SX41, SX55, SX56, SX102, SX205, SX210, SX212, SX220, SX222, SX225, SX226, SX228 and SX245 (8 sounds)",
+				"nl":"Ondersteunt SX1, SX4, SX8, SX11, SX14, SX20, SX34, SX40, SX41, SX55, SX56, SX102, SX205, SX210, SX212, SX220, SX222, SX225, SX226, SX228 en SX245 (8 geluiden)"
 			},
 			"args": [
 				{
@@ -484,8 +484,8 @@
 				"nl": "Laat de bel klinken"
 			},
 			"hint": {
-				"en":"Supports SX5i, SX15, SX15i, SX60i and SX252 (mechanical bell)",
-				"nl":"Ondersteunt SX5i, SX15, SX15i, SX60i en SX252 (mechanische bel)"
+				"en":"Supports SX5, SX15, SX60 and SX252 (mechanical bell)",
+				"nl":"Ondersteunt SX5, SX15, SX60 en SX252 (mechanische bel)"
 			},
 			"args": [
 				{
@@ -594,8 +594,8 @@
 				"nl": "Laat de bel klinken"
 			},
 			"hint": {
-				"en":"Supports SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 and SX245 (8 sounds)",
-				"nl":"Ondersteunt SX1i, SX4i, SX8i, SX11i, SX14, SX20, SX34i, SX40i, SX41i, SX55, SX56, SX102, SX205, SX210i, SX212i, SX220, SX222, SX225, SX226, SX228 en SX245 (8 geluiden)"
+				"en":"Supports SX1, SX4, SX8, SX11, SX14, SX20, SX34, SX40, SX41, SX55, SX56, SX102, SX205, SX210, SX212, SX220, SX222, SX225, SX226, SX228 and SX245 (8 sounds)",
+				"nl":"Ondersteunt SX1, SX4, SX8, SX11, SX14, SX20, SX34, SX40, SX41, SX55, SX56, SX102, SX205, SX210, SX212, SX220, SX222, SX225, SX226, SX228 en SX245 (8 geluiden)"
 			},
 			"args": [
 				{
@@ -862,8 +862,8 @@
 				"nl": "Laat de bel klinken"
 			},
 			"hint": {
-				"en":"Supports SX5i, SX15, SX15i, SX60i and SX252 (mechanical bell)",
-				"nl":"Ondersteunt SX5i, SX15, SX15i, SX60i en SX252 (mechanische bel)"
+				"en":"Supports SX5, SX15, SX60 and SX252 (mechanical bell)",
+				"nl":"Ondersteunt SX5, SX15, SX60 en SX252 (mechanische bel)"
 			},
 			"args": [
 				{

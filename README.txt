@@ -13,24 +13,23 @@ Doorbell push buttons:
 * SX39
 
 Doorbell chimes:
-* SX1i
-* SX4i
-* SX5i
+* SX1
+* SX4
+* SX5
 * SX6
 * SX7
-* SX8i
-* SX11i
+* SX8
+* SX11
 * SX14
 * SX15
-* SX15i
 * SX21
 * SX20
-* SX34i
-* SX40i
-* SX41i
+* SX34
+* SX40
+* SX41
 * SX55
 * SX56
-* SX60i
+* SX60
 * SX72
 * SX80 tested
 * SX81
@@ -43,8 +42,8 @@ Doorbell chimes:
 * SX204
 * SX205
 * SX209
-* SX210i
-* SX212i
+* SX210
+* SX212
 * SX220
 * SX222
 * SX225
