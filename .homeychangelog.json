@@ -10,5 +10,8 @@
   "1.2.0": {
     "en": "Fixed paired buttons and chimes",
     "nl": "Gepaarde drukkers en bellen gerepareerd"
+  },
+  "1.2.1": {
+    "en": "documentation updates"
   }
 }
