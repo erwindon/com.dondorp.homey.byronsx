@@ -1,0 +1,60 @@
+=== push buttons ===
+All SX buttons are supported. The known ones are:
+* SX30 tested
+* SX32 
+* SX33 tested
+* SX35
+* SX38
+* SX39
+
+=== chimes ===
+All SX chimes are supported. The known ones are:
+* SX1
+* SX4
+* SX5
+* SX6
+* SX7
+* SX8
+* SX11
+* SX14
+* SX15
+* SX21
+* SX20
+* SX34
+* SX40
+* SX41
+* SX55
+* SX56
+* SX60
+* SX72
+* SX80 tested
+* SX81
+* SX83
+* SX86
+* SX102
+* SX120
+* SX201
+* SX202
+* SX204
+* SX205
+* SX209
+* SX210
+* SX212
+* SX220
+* SX222
+* SX225
+* SX226
+* SX228
+* SX245
+* SX252
+* SX823
+
+=== advanced usage ===
+You may create more complicated scenarios where you let the Homey flow decide whether or not to send a command to the bell. First pair be bell so that it has a known internal ID. Then remove the batteries from the push button and reinsert them. This gives the push button a new random internal ID. Unless you are unlucky, the push button now has a different internal ID than the bell. You can use this to let your Homey decide whether the bell should indeed ring.
+
+=== protocol ===
+The Byron SX series push buttons and chimes all use the same 433MHz-based protocol. It uses a simple message consisting of 8 bits for the push button identification and 4 bits for the melody identification. This would suggest 256 possible IDs and 16 possible ringtones. Depending on the models of your push button and bell, less combinations may be in use.
+
+=== help ===
+Please tell me when you have a Byron SX device that is not listed in the README.txt.
+Please tell me when you have a Byron SX device that is properly working with Homey, but which is not yet marked as 'tested' in the README.txt.
