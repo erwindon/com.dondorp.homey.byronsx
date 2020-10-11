@@ -323,7 +323,11 @@ function getBits(buttonId, melodyId)
 class ByronSxDoorbell extends Homey.App {
 
 	logit(err, result) {
-		console.log("err: " + err + ", result: " + result);
+		if(err) {
+		  console.log("err: " + err + ", result: " + result);
+		} else {
+		  console.log("result: " + result);
+		}
 	}
 
 	onInit() {
@@ -392,7 +396,7 @@ class ByronSxDoorbell extends Homey.App {
 			var melodyId = args['melodyId']
 			this.log('RING-ID-GENERIC: buttonId:' + buttonId + ', melodyId:' + melodyId);
 			var bits = getBits(buttonId, melodyId);
-			this.log("bits:", bits);
+			this.log("bits: " + bits);
 			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
@@ -461,7 +465,7 @@ class ByronSxDoorbell extends Homey.App {
 			var melodyId = args['melodyId']
 			this.log('RING-ID-PAIRED: buttonId:' + buttonId + ', melodyId:' + melodyId);
 			var bits = getBits(buttonId, melodyId);
-			this.log("bits:", bits);
+			this.log("bits: " + bits);
 			byronSxSignal.tx(bits, this.logit);
 			return true;
 		});
